@@ -14,7 +14,7 @@ from django.db import models
     M 就是选项
     
 类   -----  数据表
-表名  -----   行
+表名  -----  数据行
 属性  -----  字段
 '''
 
@@ -22,6 +22,10 @@ from django.db import models
 class BookInfo(models.Model):
     # id自动生成
     name = models.CharField(max_length=10)
+
+    # 重写__str__方法，以让admin来显示书籍名字
+    def __str__(self):
+        return self.name
 
 
 class PeopleInfo(models.Model):
