@@ -19,4 +19,17 @@ from django.http import HttpResponse
 
 def index(request):
 
-    return HttpResponse('ok')
+    # return HttpResponse('ok')
+    # render 渲染模板
+    context = {
+        'name': '点击有惊喜'
+    }
+    return render(request, 'book/index.html', context=context)
+
+'''
+
+    request: Any,  请求
+    template_name: Any,  模板名字
+    context: Any = None,  将视图中的数据传递给html模板,html模板采用{{变量}}形式获取数据
+
+'''
