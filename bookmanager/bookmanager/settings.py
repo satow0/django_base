@@ -125,4 +125,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+# 访问静态资源时的url http://127.0.0.1:8000/static/dog.jpg  /static/就是这里设置的，debug 必须为 true
 STATIC_URL = '/static/'
+
+# 告知系统我们的静态文件图片在哪里
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
