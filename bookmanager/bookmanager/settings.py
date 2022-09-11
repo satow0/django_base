@@ -23,9 +23,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 't2azqmb6=b(g*r+4z^^d-$3oz38v)^mdc-8q%d^muxm2zagx&#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# 在我们开发的时候，需要看到更多的信息，所以需要开启debug模式
+# 当我们的程序上线之后，就改为false
 DEBUG = True
 
-# 默认是127.0.0.1
+# 允许以什么样的形式访问项目， 默认是127.0.0.1   '*'表示什么地址都访问项目
+# 如果需要以192.168.1.26:8000访问项目，需要在命令行启动，输入：python manage.py runserver 192.168.1.26:8000
 ALLOWED_HOSTS = ['192.168.1.26', '127.0.0.1']
 
 
